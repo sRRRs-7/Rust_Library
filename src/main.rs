@@ -63,7 +63,7 @@ fn main() {
     module2::mod_closure::closure();
     module2::mod_vec::main();
     module2::mod_box::main();
-
+    module2::mod_iterator::main();
 
 }
 
