@@ -51,6 +51,7 @@ fn main() {
     module2::mod_iterator::main();
     module2::mod_collection::main();
     module2::mod_collection2::main();
+    module2::mod_hashed_map::main();
 }
 
 // use data memory

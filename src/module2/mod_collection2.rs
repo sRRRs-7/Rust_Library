@@ -10,7 +10,7 @@ pub fn main() {
     let num: i32 = s1.parse().unwrap();
     assert_eq!(num, 100);
 
-    // to/string
+    // to_string
     let num2 = 107;
     let num2_str = num2.to_string();
     assert_eq!(num2_str, "107");
