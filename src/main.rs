@@ -4,6 +4,7 @@ mod terminal;
 mod string_lib;
 mod error_lib;
 mod concurrency;
+mod test;
 
 fn main() {
     let s = greet();
@@ -52,6 +53,7 @@ fn main() {
     module2::mod_collection::main();
     module2::mod_collection2::main();
     module2::mod_hashed_map::main();
+
 }
 
 // use data memory
