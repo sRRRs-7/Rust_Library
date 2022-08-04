@@ -1,4 +1,3 @@
-
 pub fn trait1() {
     let a = 10;
     let mut b = a;
@@ -15,7 +14,7 @@ pub fn trait1() {
     assert_eq!(*d, 10);
     assert_eq!(*e, 10);
 
-    let s = String::from("hello");  // not implement copy trait because string is primitive type
+    let s = String::from("hello"); // not implement copy trait because string is primitive type
     assert_eq!(s, "hello");
 
     let v = 'a';

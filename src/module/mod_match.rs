@@ -1,4 +1,3 @@
-
 #[derive(Debug)]
 enum Coin {
     Penny,
@@ -38,8 +37,7 @@ fn arm(coin: Coin) -> i32 {
 
 fn switch(x: Option<i32>) -> Option<i32> {
     match x {
-        Option::Some(i) => Option::Some(i),
+        Option::Some(x) => Option::Some(x),
         Option::None => Option::None,
     }
-
 }

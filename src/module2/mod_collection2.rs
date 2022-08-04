@@ -1,4 +1,3 @@
-
 pub fn main() {
     // String
     let mut s = String::new();
@@ -31,10 +30,10 @@ pub fn main() {
     let mut st = String::from("Rust");
     let st2 = String::from("Go");
 
-    let stg = st.find("s");
+    let stg = st.find('s');
     assert_eq!(stg, Some(2));
 
-    let fi = st.rfind("R");
+    let fi = st.rfind('R');
     println!("{:?}", fi);
 
     st.push('1');
@@ -89,5 +88,4 @@ pub fn main() {
     assert!(st.is_empty());
 
     println!("{:?}", st);
-
 }

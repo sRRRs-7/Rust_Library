@@ -1,4 +1,3 @@
-
 #[derive(Debug)]
 struct Sea {
     water: String,
@@ -33,7 +32,11 @@ fn substitute() {
         seaweed: String::from("coffee"),
     };
 
-    let Sea{ref water, ref creature, ref seaweed} = sea;
+    let Sea {
+        ref water,
+        ref creature,
+        ref seaweed,
+    } = sea;
     println!("{:?}", sea);
     assert_eq!(water, &sea.water);
     assert_eq!(creature, &sea.creature);

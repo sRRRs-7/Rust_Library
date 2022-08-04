@@ -1,2 +1,1 @@
-
-pub mod string_lib;
+pub mod mod_string_lib;

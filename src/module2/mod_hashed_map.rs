@@ -1,4 +1,3 @@
-
 use std::collections::HashMap;
 
 #[derive(Debug)]
@@ -6,7 +5,7 @@ enum Company {
     Linux(String),
     Mac(String),
     Windows(String),
-    IOS(String),
+    Ios(String),
     Android(String),
 }
 
@@ -21,7 +20,13 @@ struct ListOS {
 
 impl ListOS {
     fn new(linux: String, mac: String, windows: String, ios: String, android: String) -> Self {
-        Self { linux, mac, windows, ios, android  }
+        Self {
+            linux,
+            mac,
+            windows,
+            ios,
+            android,
+        }
     }
 }
 
@@ -49,7 +54,9 @@ pub fn main() {
         println!("{:?} {:?}", k, v);
     }
     // entry & or_insert
-    key_value.entry(&os.ios).or_insert(Company::IOS(String::from("ios")));
+    key_value
+        .entry(&os.ios)
+        .or_insert(Company::Ios(String::from("ios")));
     key_value.insert(&os.android, Company::Android(String::from("android")));
     println!("{:?}", key_value);
 
@@ -60,7 +67,7 @@ pub fn main() {
     let lang: HashMap<_, _> = key_arr.iter().zip(value_arr.iter()).collect();
     for (key, val) in lang {
         println!("{}:{}", key, val);
-    };
+    }
 
     // methods
     {

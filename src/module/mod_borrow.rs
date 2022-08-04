@@ -1,4 +1,3 @@
-
 pub fn borrow_constraint() {
     let mut a = 10;
     let _b = &a;
@@ -19,6 +18,6 @@ pub fn borrow3() {
     let mut a = 10;
     let b = &mut a;
     *b = 30;
-    assert_eq!(*b == a, true);
+    assert!(*b == a);
     assert_eq!(a, 30);
 }

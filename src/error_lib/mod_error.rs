@@ -1,5 +1,7 @@
-
-use std::{fs::File, io::{ErrorKind, Write}};
+use std::{
+    fs::File,
+    io::{ErrorKind, Write},
+};
 
 pub fn file_process() {
     let path = "text.txt";
@@ -7,12 +9,10 @@ pub fn file_process() {
     let f = File::create(path);
     let mut f = match f {
         Ok(f) => f,
-        Err(ref e) if e.kind() == ErrorKind::NotFound => {
-            match File::create(path) {
-                Ok(nf) => nf,
-                Err(e) => panic!("Error creating file: {}", e),
-            }
-        }
+        Err(ref e) if e.kind() == ErrorKind::NotFound => match File::create(path) {
+            Ok(nf) => nf,
+            Err(e) => panic!("Error creating file: {}", e),
+        },
         Err(e) => panic!("Error reading file: {}", e),
     };
 

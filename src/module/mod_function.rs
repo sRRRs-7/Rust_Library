@@ -1,4 +1,3 @@
-
 pub fn main() {
     let args = (1, 2);
     assert_eq!(coordinate(args), 2);
@@ -11,4 +10,3 @@ pub fn main() {
 fn coordinate((n1, n2): (i32, i32)) -> i32 {
     n1 * n2
 }
-

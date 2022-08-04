@@ -15,7 +15,12 @@ enum Colors {
 
 impl Fruits {
     fn new(apple: Colors, banana: Colors, peach: Colors, strawberry: Colors) -> Self {
-        Self {apple, banana, peach, strawberry}
+        Self {
+            apple,
+            banana,
+            peach,
+            strawberry,
+        }
     }
 }
 
@@ -29,10 +34,10 @@ pub fn main() {
 
     let color = fruit.apple;
     match color {
-        Colors::Red(_) => println!("{}", "apple"),
-        Colors::Yellow(_) => println!("{}", "banana"),
-        Colors::Pink(_) => println!("{}", "peach"),
-        Colors::Berry(_) => println!("{}", "strawberry"),
+        Colors::Red(_) => println!("apple"),
+        Colors::Yellow(_) => println!("banana"),
+        Colors::Pink(_) => println!("peach"),
+        Colors::Berry(_) => println!("strawberry"),
     }
 
     println!("{:?}", fruit.banana);

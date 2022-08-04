@@ -1,4 +1,3 @@
-
 struct Space {
     x: f64,
     y: f64,
@@ -8,7 +7,7 @@ struct Space {
 // constructor -> initialize function
 impl Space {
     fn new(x: f64, y: f64, z: f64) -> Self {
-        Self {x, y, z}
+        Self { x, y, z }
     }
 }
 

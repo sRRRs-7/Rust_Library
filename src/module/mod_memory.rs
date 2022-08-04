@@ -1,4 +1,3 @@
-
 // heap memory allocation
 pub fn main() {
     // allocate heap memory

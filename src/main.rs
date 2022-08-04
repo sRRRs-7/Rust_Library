@@ -1,10 +1,10 @@
+mod concurrency;
+mod error_lib;
 mod module;
 mod module2;
-mod terminal;
 mod string_lib;
-mod error_lib;
-mod concurrency;
-mod test;
+mod terminal;
+mod utility;
 
 fn main() {
     let s = greet();
@@ -13,7 +13,7 @@ fn main() {
     terminal::terminal_io::main();
     terminal::terminal_io2::main();
     // string
-    string_lib::string_lib::main();
+    string_lib::mod_string_lib::main();
     module::mod_borrow::borrow_constraint();
     module::mod_borrow::borrow2();
     module::mod_borrow::borrow3();
@@ -43,7 +43,7 @@ fn main() {
     //error
     error_lib::mod_error::file_process();
     // concurrency
-    concurrency::concurrency::main();
+    concurrency::mod_concurrency::main();
     // module2
     module2::mod_proprietorship::main();
     module2::mod_closure::closure();
@@ -54,11 +54,12 @@ fn main() {
     module2::mod_collection2::main();
     module2::mod_hashed_map::main();
 
+    utility::mod_utility::main();
 }
 
 // use data memory
 fn greet() -> &'static str {
     let a = "hello";
     let a2 = a;
-    return a2
+    a2
 }

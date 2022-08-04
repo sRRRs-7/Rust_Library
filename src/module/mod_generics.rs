@@ -18,10 +18,7 @@ impl<T: Add<Output = T>> Add for Point<T> {
 }
 
 pub fn main() {
-    let point = Point{
-        x: 2,
-        y: 1,
-    };
+    let point = Point { x: 2, y: 1 };
     let sum = point.add(point);
 
     assert_eq!(sum.x, 4);

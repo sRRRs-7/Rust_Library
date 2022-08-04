@@ -1,4 +1,3 @@
-
 pub fn main() {
     // Vec
     let mut arr: Vec<i32> = Vec::new();
@@ -39,5 +38,5 @@ pub fn main() {
     println!("array length: {}", l);
 
     arr3.clear();
-    assert_eq!(arr3.is_empty(), true);
+    assert!(arr3.is_empty());
 }

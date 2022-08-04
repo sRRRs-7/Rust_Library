@@ -1,4 +1,3 @@
-
 pub fn type1() {
     let (a, b, c) = (1, 2, 3);
     let [x, y, z] = [10, 20, 30];

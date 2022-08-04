@@ -1,4 +1,3 @@
-
 enum List {
     Cons(i32, Box<List>),
     Nil,
@@ -26,11 +25,7 @@ fn print_list(list: &List) {
 
 fn append(list: &List, val: i32) -> List {
     match list {
-        Cons(x, ls) => {
-            Cons(*x, Box::new(append(ls, val)))
-        },
-        Nil => {
-            Cons(val, Box::new(Nil))
-        }
+        Cons(x, ls) => Cons(*x, Box::new(append(ls, val))),
+        Nil => Cons(val, Box::new(Nil)),
     }
 }

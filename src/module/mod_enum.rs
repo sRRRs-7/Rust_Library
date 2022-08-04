@@ -1,4 +1,3 @@
-
 #[derive(Debug)]
 enum IpAddrKind {
     V4(String),
@@ -13,19 +12,13 @@ struct IpAddress {
 
 impl IpAddress {
     fn new(version: IpAddrKind, address: String) -> Self {
-        Self{version, address}
+        Self { version, address }
     }
 }
 
 pub fn main() {
-    let ip4 = IpAddress::new(
-        IpAddrKind::V4(String::from("4")),
-        String::from("127.0.0.1")
-    );
-    let ip6 = IpAddress::new(
-        IpAddrKind::V6(String::from("6")),
-        String::from("::1")
-    );
+    let ip4 = IpAddress::new(IpAddrKind::V4(String::from("4")), String::from("127.0.0.1"));
+    let ip6 = IpAddress::new(IpAddrKind::V6(String::from("6")), String::from("::1"));
 
     println!("{:?} {:?}", ip4.version, ip4.address);
     println!("{:?} {:?}", ip6.version, ip6.address);
@@ -39,9 +32,9 @@ enum Foo {
 }
 
 fn switch() {
-    let foo = Foo::Baz(1);
-    match foo {
-        Foo::Baz(i) => println!("{}", i),
+    let f = Foo::Baz(1);
+    match f {
+        Foo::Baz(x) => println!("{}", x),
         _ => {}
     };
 }

@@ -1,18 +1,17 @@
-
 pub fn syntax() {
     // while condition not return
     let mut n = 3;
     while n != 10 {
         n += 1;
-    };
+    }
     assert_eq!(n, 10);
 
     // for iter
-    let arr = [1,2,3,4,5];
+    let arr = [1, 2, 3, 4, 5];
     let mut sum = 0;
     for v in arr {
         sum += v
-    };
+    }
     assert_eq!(sum, 15);
 
     // loop can return

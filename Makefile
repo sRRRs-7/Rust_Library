@@ -7,7 +7,16 @@ check:
 test:
 	cargo test
 
-exec:
-	rustc src/string_lib/string_lib.rs
+rustc_doc:
+	rustup doc
 
-.PHONY: rust, check, test, exec,
+cargo_doc:
+	cargo doc
+
+fmt:
+	cargo fmt
+
+clippy:
+	cargo clippy
+
+.PHONY: rust, check, test, rust_doc, cargo_doc, fmt, clippy

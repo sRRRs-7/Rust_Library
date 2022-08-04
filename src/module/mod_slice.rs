@@ -1,4 +1,3 @@
-
 pub fn slice() {
     let arr = [1, 2, 3, 4, 5];
     let get_arr = &arr[1..=3];
@@ -20,4 +19,3 @@ pub fn extract() {
     let slice = &s[..];
     println!("{:?}", slice)
 }
-

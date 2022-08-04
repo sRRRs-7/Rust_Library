@@ -1,17 +1,14 @@
-
-use std::rc::Rc;
 use std::cell::{Cell, RefCell};
+use std::rc::Rc;
 
 // proprietorship duplicate
 pub fn main() {
-
     // Rc put data in heap memory
     let a = Rc::new(10);
     let b = Rc::clone(&a);
     assert_eq!(a, b);
     dbg!(Rc::strong_count(&a));
     dbg!(Rc::strong_count(&b));
-
 
     // internal mutability
     let c = Cell::new(100);
@@ -28,7 +25,6 @@ pub fn main() {
     dbg!(e);
     dbg!(f);
 
-
     // Rc & Cell impl
     let g = Rc::new(Cell::new(100));
     g.set(200);
@@ -38,7 +34,6 @@ pub fn main() {
     h.set(300);
     dbg!(g.get());
     dbg!(h.get());
-
 
     // borrow ref & ref mut
     let st = Rc::new(RefCell::new(String::from("Mac Dictionary")));
@@ -50,5 +45,4 @@ pub fn main() {
     let st2 = Rc::clone(&st);
     *(st2.borrow_mut()) = String::from("windows");
     dbg!(st2.borrow());
-
 }
